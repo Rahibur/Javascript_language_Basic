@@ -1,0 +1,412 @@
+ <!DOCTYPE html>
+<html>
+<body onload="MyEvent('Loaded')">
+    <!-- <button onclick="objAlert()">Click</button>
+    <button onclick="objConfirm()">Click to confirm</button>
+    <button onclick="objPrompt()">Click to Prompt</button>
+    <button onclick="objOpen()">Click to open new tab</button>
+    <button onclick="objClose()">Click to close </button>
+    <button onclick="MyEvent('Mouse is clicked')">Click </button>
+    <button onmouseover="MyEvent('Mouse is overed')">over</button>
+    <button onmouseout="MyEvent('Mouse is out')">out </button>
+    <input onkeydown="MyEvent('Mouse is down')"/><br/>
+    <input onchange="MyEvent('Mouse is change')"/><br/>
+    <input onkeyup="MyEvent('Mouse is up')"/><br/> -->
+    
+<script>
+//From (Introduction to Do while loop)
+// https://youtu.be/Gbh1dWsTqWg?si=l_7ZrigBOmrlxz4-
+
+
+
+/*-----------------------------Function-------------------------*/
+
+function addNumber(){
+    n1=6;
+    n2=7;
+    var n3=n1+n2;
+    document.write(n3+"<br>")
+}
+addNumber()
+
+/*-----------------------------Function Parameter-------------------------*/
+function addNumber(n1,n2){
+    var n3=n1+n2;
+    document.write(n3+"<br>")
+}
+addNumber(10,20)
+
+/*---------------------------function return----------------------------------*/
+function addTwoNum(n1,n2){
+    return n1+n2
+}
+var newValue = addTwoNum(2,3)+2;
+document.write(newValue);
+/*---------------------------------For In Over Object----------------------------------------------*/
+var person={
+    name:"jack",
+    age:60,
+    city:"London",
+    height:"7 feet"
+}
+
+for(var item in person){
+    document.write(person[item]+"<br>")
+}
+
+
+
+
+/*---------------------------------For In Over Array----------------------------------------------*/
+
+var catagory=["Alluminium","Fruits","Dairy"]
+
+for(var item in catagory){
+    document.write(catagory[item]+"<br>")
+}
+
+
+/*---------------------------------For loop Over Array----------------------------------------------*/
+
+var catagory=["Alluminium","Fruits","Dairy","Sweets"]
+var i;
+for(i=0;i<catagory.length;i++){
+    document.write(catagory[i]+"<br>")
+}
+
+/*----------------------------------JS Array-----------------------*/
+//=================================JavaScript Array concat()========================================================================
+
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin"];
+const children = arr1.concat(arr2, arr3); 
+document.writeln(children);
+
+
+
+
+ //===============================JavaScript Array.from()================================================
+let text = "ABCDEFG"
+const myArr = Array.from(text);
+document.writeln(myArr[1]);
+
+
+ //==============================Array Filter()============================================================
+var numArray=[30,32,40,55,60,80,90]
+var result = numArray.filter(function(item){
+    return item > 50
+});
+document.write(result);
+
+
+ //==============================Array Find()============================================================
+var numArray=[30,32,40,55,60,80,90]
+var result = numArray.find(function(value){
+    return value <100
+});
+document.write(result);
+
+
+//==============================Array FindIndex()============================================================
+var numArray=[30,32,40,55,60,80,90]
+var result = numArray.findIndex(function(value){
+    return value > 80
+});
+document.write(result);
+
+
+
+//==============================Foreach over Array============================================================
+var numArray =[30,32,40,55,60,80,90]
+numArray.forEach(function(item){
+    document.write(item+"<br/>")
+})
+
+
+//==============================Array Includes()============================================================
+var numArray=[30,32,40,60,80]
+var result= numArray.includes(80)
+document.write(result);
+
+
+//============================== Array IndexOf()============================================================
+var numArray=[30,32,40,55,60,80,90]
+var result= numArray.indexOf(80);
+document.writeln(result);
+
+
+//==============================Array pop()============================================================
+var numArray=[30,32,40,55,60,80,90]
+numArray.pop()
+numArray.pop()
+numArray.pop()
+numArray.pop()
+document.writeln(numArray);
+
+
+
+
+//==============================Array push()============================================================
+var numArray=[30,32,40,55,60,80,90]
+numArray.push(89)
+document.writeln(numArray);
+
+
+//==============================Array reverse()============================================================
+var numArray=[30,32,40,55,60,80,90]
+numArray.reverse()
+document.writeln(numArray);
+
+
+//==============================Array sort () Ascending============================================================
+var numArray=[30,32,80,90,,40,55,60]
+numArray.sort()
+document.writeln(numArray);
+
+//==============================descdending order============================================================
+var numArray=[30,32,80,90,,40,55,60]
+numArray.sort().reverse()
+document.writeln(numArray);
+
+
+//==============================Array Slice()============================================================
+var numArray=[30,32,80,90,,40,55,60]
+var result =numArray.slice(1,3);
+document.writeln(result);
+
+
+//============================== Array splice()============================================================
+var numArray=[30,32,80,90,,40,55,60]
+numArray.splice(5,0,31)
+document.writeln(numArray);
+
+
+
+
+
+
+
+/*------------------------------------------------------------String methods-------------------------------------------------------------------*/
+
+//==============================charAt()==============================
+var country = "Bangladesh"
+document.write(country.charAt(0))
+
+//==============================concat()==============================
+var country1="Bangladesh"
+var country2="India"
+document.write(
+    country2.concat(country1)
+)
+
+//==============================indexOf()==============================
+var country="Bangladesh";
+document.write(country.indexOf("a"))
+
+//==============================lastIndexOf()==============================
+var country="Bangladesh";
+document.write(country.lastIndexOf("a"))
+
+//==============================replace==============================
+var country="Bangladesh";
+document.write(country.replace("Bangla","Lenta"))
+
+
+//==============================substr==============================
+var country="Bangladesh";
+document.write(country.substr(0,4))
+
+
+//==============================substring==============================
+var country="Bangladesh";
+document.write(country.substring(6,4))
+
+
+//==============================toupperCase==============================
+var country="Bangladesh";
+document.write(country.toUpperCase())
+
+//==============================tolowerCase==============================
+var country="Bangladesh";
+document.write(country.toLocaleLowerCase())
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------JS Date obj------------------------------------------------------------*/
+
+//==============================getFullYear(),getdate(),getDay(),getHours(),getMiliseconds()==============================
+var obj = new Date();
+document.write(obj.getFullYear())
+
+
+
+
+
+
+
+/*-------------------------------------------------JS Math obj------------------------------------------------------------*/
+//=======abs()=============
+var num = -4;
+document.write(Math.abs(num));
+
+//=======ceil()=============
+var num = 7.4;
+document.write(Math.ceil(num));
+
+//=======floor()=============
+var num = 9.4;
+document.write(Math.floor(num));
+
+//=======min(),max()=============
+document.write(Math.min(22,23,24));
+document.write(Math.max(22,23,24));
+
+//===========random()============
+ document.write(Math.random());
+//===========round()============
+var num = 9.9;
+document.write(Math.round(num));
+
+
+
+
+
+
+
+/*-------------------------------------------------JS Number object------------------------------------------------------------*/
+
+
+//==============================isFinite==============================
+var num=9.8
+document.write(Number.isFinite(num))
+
+//==============================isInteger==============================
+var num=9.8
+document.write(Number.isInteger(num))
+
+//==============================parseFloat==============================
+var num="9.8"
+document.write(Number.parseFloat(num))
+
+
+//==============================parseInt==============================
+var num_1="7.8"
+document.write(Number.parseInt(num_1))
+
+
+
+
+//==============================toFixed==============================
+var num=7.778899
+document.write(num.toFixed(3))
+
+
+
+//==============================toString==============================
+var num=7.778899
+document.write(num.toString())
+
+
+
+
+
+
+/*---------------------------------------------------Window Object------------------------------------------------*/
+
+//==============================alert()==============================
+function objAlert(){
+    alert("success")
+}
+
+//==============================objconfrmation()==============================
+function objConfirm(){
+   let result = confirm("Do you want to delete!")
+    document.write(result);
+}
+
+
+//==============================objprompt()==============================
+function objPrompt(){
+   let result = prompt("Do you want to delete!")
+    document.write(result);
+}
+
+//==============================objOpen()==============================
+function objOpen(){
+   open()
+}
+
+
+//==============================objClose()==============================
+function objClose(){
+   close()
+}
+
+
+
+//==============================setTimeout()==============================
+setTimeout(function(){
+    alert ("Alert after 5 mins")
+},10000)
+
+
+//==============================Navigator objects()==============================
+var appCodeName=navigator.appCodeName;
+var appName=navigator.appName;
+var appVersion=navigator.appVersion;
+var cookieEnabled=navigator.cookieEnabled;
+var language=navigator.language;
+var userAgent=navigator.userAgent;
+var platform=navigator.platform;
+
+
+document.write(appCodeName +"<br>")
+document.write(appName +"<br>")
+document.write(appVersion +"<br>")
+document.write(cookieEnabled +"<br>")
+document.write(language +"<br>")
+document.write(userAgent +"<br>")
+document.write(platform +"<br>")
+
+
+
+//==============================Geo-location()==============================
+navigator.geolocation.getCurrentPosition(function(position){
+    let altitude = position.coords.altitude;
+    let latitude = position.coords.latitude;
+    let longitude= position.coords.longitude;
+    let speed= position.coords.speed;
+
+
+document.write("altitude"+altitude+"<br>")
+document.write("Latitude"+latitude+"<br>")
+document.write("longitude"+longitude+"<br>")
+document.write("speed"+speed+"<br>")
+})
+
+
+//==============================common events onclick,onmouseover,onmouseout,onchange etc============================================================
+
+function MyEvent(msg){
+    document.write(msg)
+}
+
+function MyEvent(msg){
+    console.log(msg)
+}
+
+
+
+
+</script>
+
+</body>
+</html>
+ 
